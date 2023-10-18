@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript</h1>
+    <p>Hello</p>
+    <script>
+        //Math Method//
+        //Math.round() mengembalikan bilangan bulat terdekat//
+        let a = 4.6
+        console.log(Math.round(a)); //Result : 5//
+
+        let a2 = 4.5
+        console.log(Math.round(a2)); //Result : 5//
+
+        let a3 = 4.4
+        console.log(Math.round(a3)); //Result : 4//
+
+        //Math.ceil()mengembalikan nilai x yang di butuhkan ke atas ke bilangan bulat terdekat//
+        let b = 4.6
+        console.log(Math.ceil(b)); //Result : 5//
+
+        let b2 = 4.4
+        console.log(Math.ceil(b2)); //Result : 5//
+
+        let b3 = -4.4
+        console.log(Math.ceil(b2)); //Result : -4//
+
+        //Math.floor()mengembalikan nilai x yang dibulatkan ke bawah ke bilangan bulat terdekat//
+        let c = 4.9
+        console.log(Math.floor(c)); //Result : 4//
+
+        let c2 = 4.4
+        console.log(Math.floor(c2)); //Result : 4//
+
+        let c3 = -4.4
+        console.log(Math.floor(-4.4)); //Result : -5//
+
+        //Math.trunc()Mengembalikan bagian integer dari x//
+        let d = 4.9
+        console.log(Math.trunc(d)); //Result : 4//
+
+        let d2 = 4.4
+        console.log(Math.trunc(d2)); //Result : 4//
+
+        let d3 = -4.4
+        console.log(Math.trunc(d3)); //Result : -4//
+
+        //Math.pow()mengembalikan nilai x ke pangkat y//
+        let e = 8
+        let e2 = 2
+        console.log(Math.pow(e, e2));
+
+        //Math.Sqrt()mengembalikan akar kuadrat dari x//
+        let f = 64
+        console.log(Math.sqrt(f));
+
+        //Math.min()&Math.max()untuk nilai terendah dan tertinggi//
+        let g = 0
+        let g2 = 150
+        let g3 = 20
+        let g4 =-200
+        console.log(Math.min(g,g2,g3,g4));
+        console.log(Math.max(g,g2,g3,g4));
+
+        //Math.random()mengembalikan angka acak antara 0(inklusif)& 1(ekslusif)//
+        console.log(Math.random()); //Result : random number 0-1//
+        
+        //Math.random bisa digabungkan dengan Math Method lainya//
+        console.log(Math.floor(Math.random() *10)); //Result : random number 0-9//
+        //Math Method end//
+
+    </script>
+</body>
+</html>

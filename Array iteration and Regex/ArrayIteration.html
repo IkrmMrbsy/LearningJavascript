@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Iteration</title>
+</head>
+<body>
+    <h1>javascript</h1>
+    <p>Hello</p>
+    <script>
+        //Array Iteration//
+        //forEach()memanggil fungsi sekali untuk elemen array//
+        const numbers = [45, 4, 9, 16, 25];
+        numbers.forEach(myFunction);
+        function myFunction(value, index, array){
+            console.log(value);
+        }
+        console.log(numbers);
+
+        //map()membuat array baru dengan menjalankan fungsi pada setiap elemen array//
+        const numbers2 =[45, 4, 9, 16, 25];
+        const numbers3 = numbers2.map(myFunction);
+        function myFunction(value){
+            return value *2;
+        }
+        console.log(numbers3);
+
+        //filter()membuat larik baru dengan elemen larik yang lolos pengujian//
+        const numbers4 = [45, 9, 16, 25];
+        const over18 = numbers4.filter(myFunction);
+        function myFunction (value, index, array){
+            return value > 18; //Akan menampilkan angka yang lebih dari 18//
+        }
+        console.log(over18);
+
+        //every()memeriksa apakah semua nilai array lulus tes//
+        const numbers5 = [30, 17, 90, 25];
+        const every18 = numbers5.every(myFunction);
+        function myFunction(value){
+            return value > 18;
+        }
+        console.log(every18);
+        //some()memeriksa apakah beberapa nilai larik lulus ujian//
+        const numbers6 = [10, 19, 20, 13];
+        const some18 = numbers6.some(myFunction);
+        function myFunction(value){
+            return value >18;
+        }
+        console.log(some18);
+
+        //IndexOf()mencari array untuk nilai elemen dan mengembalikan pada posisi berapa//
+        const fruits = ['Apple', 'Orange', 'Apple', 'Mango'];
+        let position = fruits.indexOf('Mango');
+        console.log(position);
+
+        //find()mengembalikan nilai elemen larik pertama yang melewati fungsi pengujian//
+        const numbers7 = [4, 9, 16, 25, 29];
+        let first = numbers7.find(myFunction);
+        function myFunction (value, index , array){
+            return value > 18;
+        }
+        console.log(first);
+        //Array Iteration end//
+    </script>
+</body>
+</html>
