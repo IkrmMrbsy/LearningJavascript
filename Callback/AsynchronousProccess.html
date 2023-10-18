@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Proccess</title>
+</head>
+
+<body>
+    <h1>javascript</h1>
+    <p>hello</p>
+    <script>
+        //Asynchronous Proccess//
+        // function satu () {
+        //     console.log("satu");
+        // }
+        // function dua () {
+        //     console.log("dua Sedang di proses");
+        //     setTimeout(() => {
+        //         console.log("dua");
+        //     }, 3000)
+        // }
+        // function tiga () {
+        //     console.log("tiga");
+        // }
+
+        // satu();
+        // dua();
+        // tiga();
+
+        //Asynchronous Proccess lebih kompleks//
+
+        const token = ~~[Math.random() * 12345678]
+
+        const pictures = ["fredd.jpg", "bri.jpg", "john.jpg"]
+
+        function login(username, callback) {
+            console.log('Processing token user now...')
+            setTimeout(() => {
+                callback({ token: token, username })
+            }, 200)
+        }
+
+        function getUser(token, callback) {
+            console.log("Processing apikey now...")
+            if (token)
+                setTimeout(() => {
+                    callback({ apikey: "xkey123" });
+                }, 500)
+        }
+
+        function getPicture(apikey, callback) {
+            console.log("Process Pictures Now...")
+            if (apikey)
+                setTimeout(() => {
+                    callback({ pic: pictures })
+                }, 1500)
+        }
+
+        login("Ikram_Marbasy", function (response) {
+            const { token } = response
+            getUser(token, function (response) {
+                const { apikey } = response
+                getPicture(apikey, function (response) {
+                    const { pic } = response
+                    console.log(pic)
+                })
+
+            })
+        })
+
+    // const {apikey} = getUser(user.token);
+    // console.log(apikey)
+
+    // const getUserPicture = getPicture(apikey)
+    // console.log(getUserPicture);
+    </script>
+</body>
+
+</html>

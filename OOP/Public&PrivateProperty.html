@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public N Private Property</title>
+</head>
+<body>
+    <h1>javascript</h1>
+    <p>Hello</p>
+    <script>
+        //Public & Private Property//
+        class Person {
+            #relationship
+            constructor(name, age) {
+                this.name = name
+                this.age = age
+                this.#relationship = 'In shambles'
+            }
+            get getRelationship() {
+                return this.#relationship
+            }
+            getRelation() {
+                return this.#relationship
+            }
+        }
+        const Person2 = new Person('Nazwa', 23)
+        console.log(Person2.getRelationship);
+        console.log(Person2.getRelation());
+    </script>
+</body>
+</html>

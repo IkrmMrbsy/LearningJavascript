@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Methods</title>
+</head>
+<body>
+    <h1>Java script</h1>
+    <p>Number Method</p>
+    <script>
+        //Number Method//
+        let a = 12300000; //kita dapat menulis dengan eksponen//
+        let a2 = 123e5;   //Result : 12300000//
+
+        let b = 0.00123;  //kita dapat menulis dengan eksponen//
+        let b2 = 123e-5;  //Result : 0.00123//
+
+        //Persisi Floating//
+        let c = ((0.2 * 10) + (0.1 * 10)) / 10;
+        console.log(c); //Result 0.3//
+        //Persisi Floating end//
+
+        //Metode toString() untuk mengembalikan angka menjadi string//
+        let d = 123;
+        console.log(d.toString()); //Result: "123"//
+        //Metode toString() end//
+
+        //Metode toExponential() Mengembalikan string dengan angka dibulatkan dan di tulis dengan notasi eksponensial//
+        let e = 9.656;
+        console.log(e.toExponential()); //Result :9.656e+0//
+        console.log(e.toExponential(2)); //Result :9.66e+0//
+        console.log(e.toExponential(4)); //Result: 9.6560e+0//
+        
+        //Metode toExponential()end//
+
+        //Metode toFixed()Mengembalikan string dengan nomor yang ditulis dengan jumlah desimal yang ditentukan//
+        let f = 9.656;
+        console.log(f.toFixed()); //Result : 10//
+        console.log(f.toFixed(2)); //Result : 9.66//
+        console.log(f.toFixed(4)); //Result : 9.6560//
+        //Metode toFixed()end
+
+        //Metode toPrecision()Mengembalikan string dengan nomor yang ditulis dengan panjang tertentu//
+        let g = 9.656;
+        console.log(g.toPrecision()); //Result :9.656//
+        console.log(g.toPrecision(2)); //Result :9.7//
+        console.log(g.toPrecision(4)); //Result :9.656//
+        //Metode toPrecision()end//
+        //Number Method end//
+    </script>
+</body>
+</html>

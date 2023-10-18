@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menambah Menghapus Element</title>
+</head>
+<body>
+    <h1>Menambah dan menghapus elemen dalam document</h1>
+    <div id="div1">The text above has been created dynamically</div>
+    <script>
+        document.body.onload = addElement;
+        function addElement(){
+            const newDiv = document.createElement('div');
+            const newContent = document.createTextNode('Hi there and greeting!');
+            newDiv.appendChild(newContent);
+            const currentDiv = document.getElementById('div1');
+            document.body.insertBefore(newDiv, currentDiv);
+        }
+    </script>
+    <!--Menambah dan menghapus elemen pada child-->
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+    </ul>
+    <p>Click the button to append an item to the end of the list</p>
+    <button onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+            let node = document.createElement('LI');
+            let textnode = document.createTextNode('water');
+            node.appendChild(textnode);
+            document.getElementById('myList').appendChild(node);
+        }
+    </script>
+    <!--Menambah dan menghapus elemen pada child end-->
+
+    <!--Change Style Property-->
+    <p id="myP">Click the button to give me a red background color</p>
+    <button onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction(){
+            document.getElementById('myP').style.backgroundColor='black';
+            document.getElementById('myP').style.color='White';
+        }
+    </script>
+    <!--Change Style Property end-->
+
+     <!--addEventListener-->
+     <h1>Java Script addEventListener()</h1>
+     <p>
+        This example uses the addEventListener() method to execute a function when a user clicks on a button.
+     </p>
+     <button id="myBtn">Try it</button>
+     <script>
+        document.getElementById('myBtn').addEventListener('click', myFunction);
+        function myFunction(){
+            alert('hello, this website is still of developer');
+        }
+     </script>
+     <!--add many event to the same element-->
+     <h1>Java Script addEventListener()</h1>
+     <p>
+        This example uses the addEventListener() method to execute a function when a user clicks on a button.
+     </p>
+     <button id="myBtn2">Try it</button>
+     <script>
+        var x = document.getElementById('myBtn2');
+        x.addEventListener('click', myFunction);
+        x.addEventListener('click', someOtherFunction);
+        function myFunction(){
+            alert('hello');
+        }
+        function someOtherFunction(){
+            alert('This function was also execute');
+        }
+     </script>
+     <!--addEventListener end-->
+</body>
+</html>

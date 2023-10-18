@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Function</title>
+</head>
+<body>
+    <h1>javascript</h1>
+    <p>Hello</p>
+    <script>
+        //Constructor Function//
+        function Person(name, age){
+            this.name = name;
+            this.age = age;
+        }
+        const personOne = new Person('Budi', 20);
+        const personTwo = new Person('Cici', 24);
+        console.log(personOne);
+
+        //Dapat juga menambahkan variable//
+        function Person(nama, umur){
+            this.nama = nama
+        }
+        const orangOne = new Person('Angga');
+        const orangTwo = new Person('Zidan');
+
+        orangOne.umur = 46;
+        console.log(orangOne);
+
+        //jika ingin mendefine/menambahkan variable age satu kali//
+        function Person(){
+            this.nama = 'Ikram'
+        }
+        Person.prototype.age = 20;
+        const anggotaOne = new Person();
+        console.log(anggotaOne.age);
+        const anggotaTwo = new Person();
+        console.log(anggotaTwo.age);
+    </script>
+</body>
+</html>

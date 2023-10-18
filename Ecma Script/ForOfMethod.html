@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Of Method</title>
+</head>
+<body>
+    <h1>javascript</h1>
+    <P>Hello</P>
+    <script>
+        //For of Method//
+
+        //For of Loop//
+
+        //Penggunaan pada array//
+        const numbers = [100, 200, 300, 400, 500]
+            for (const number of numbers){
+                console.log(number);
+            }
+        
+        //Penggunaan pada string//
+        const names = ["Lennon", "Mercury", "Cobain"]
+        for (const name of names){
+            console.log(name);
+        }
+
+        //For in Loop digunakan untuk perulangan pada properti sebuah Object//
+        //for in loop pada Object//
+        const objek1 = {
+            name : "Ikram",
+            age : 20
+        }
+        for (const key in objek1){
+            console.log(key);
+        }
+
+        //for in Loop pada Array//
+        const array1 = [1, 2, 3]
+        for (const key in array1){
+            console.log(key);
+        }
+    </script>
+</body>
+</html>
