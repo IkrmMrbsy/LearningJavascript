@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript</h1>
+    <p>Hello</p>
+    <script>
+        //Array Sort//
+        //Sort/ mengurutkan array menurut abjad//
+        const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+        console.log(fruits.sort());
+
+        //reverse()untuk mengurutkan array dalam urutan menurun//
+        const fruits2 =['Banana', 'Orange', 'Apple', 'Mango'];
+        console.log(fruits2.reverse());
+
+        //Sortir Numerik/ agar lebih sesuai mengurutkanya//
+        const angka = ['40', '100', '1', '5', '25', '10'];
+        angka.sort(function(a, b){return a-b});
+        console.log(angka);
+        //Sortir array dalam object//
+        const score =[
+            {type : "Ronaldo", year:2019},
+            {type : "Messi", year:2014},
+            {type : "Lewandowski", year:2020}
+        ]
+        score.sort(function(a, b){return a.year- b.year});
+        console.log(score);
+        //Array Sort end//
+    </script>
+</body>
+</html>

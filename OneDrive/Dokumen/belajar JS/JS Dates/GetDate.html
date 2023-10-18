@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript</h1>
+    <p>Hello</p>
+    <script>
+        //Get Date//
+
+        //getTime() mengembalikan jumlah milidetik sejak 1 januari//
+        let a = new Date ();
+        console.log(a.getTime());
+
+        //getFullYear() mengembalikan tahun tanggal sebagai angkaempat digit//
+        let b = new Date ();
+        console.log(b.getFullYear());
+
+        //getMonth() mengembalikan bulan dari tanggal sebagai angka (0-11)//
+        let c = new Date ();
+        console.log(c.getMonth());
+
+        //getDate() mengembalikan hari dari suatu tanggal sebagai angka (1-31)//
+        let d = new Date ();
+        console.log(d.getDate());
+
+        //getHours() mengembalikan jam tanggal sebagai angka (0-23)//
+        let e = new Date ();
+        console.log(e.getHours());
+
+        //getMinutes() mengembalikan menit dari suatu tanggal sebagai angka (0-59)//
+        let f = new Date ();
+        console.log(f.getMinutes());
+
+        //getSeconds() mengembalikan detik tanggal sebagai angka (0-59)//
+        let g = new Date ();
+        console.log(g.getSeconds());
+
+        //getMilliseconds() mengembalikan milidetik tanggal sebagai angka (0-999)//
+        let h = new Date ();
+        console.log(h.getMilliseconds());
+
+        //getDay() mengembalikan hari kerja tanggal sebagai angka (0-6)//
+        let i = new Date ();
+        console.log(i.getDay());
+
+        let i2 = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]; //Mengembalikan hari dengan nama//
+        console.log(i2[new Date().getDay()]);
+        //Get Date end//
+    </script>
+</body>
+</html>

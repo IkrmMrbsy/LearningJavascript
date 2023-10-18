@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript</h1>
+    <p>Hello</p>
+    <script>
+        //About Class//
+
+        //Encapsulation//
+        class Ongkir {
+            #pajak //Membuat property menjadi private//
+            constructor(weight) {
+                this.#pajak = 1000
+                this.biaya = this.calculatePrice(weight)
+            }
+            calculatePrice(weight) {
+                return weight * 1000
+            }
+            get totalPrice() {
+                return this.biaya + this.#pajak
+            }
+        }
+        const ongkir = new Ongkir(25)
+        console.log(ongkir.totalPrice)
+        ongkir.pajak = 6000
+        console.log(ongkir.totalPrice)
+
+        //Inheritance//
+        class People {
+            constructor(name, age) {
+                this.name = name
+                this.age = age
+                this.job = 'jobless'
+            }
+            get getJob() {
+                return this.job
+            }
+        }
+        class PersonWithJob extends People { //Child Class//
+            constructor(name, age, job) {
+                super(name, age) //Bisa di anggap sebagai new People(name, age)//
+                this.job = job
+            }
+        }
+        const Syafiq = new People('Syafiq', 22)
+        const Ikram = new PersonWithJob('Ikram', 20, 'Web Devlopment')
+        console.log(Syafiq.getJob)
+        console.log(Ikram.getJob)
+
+        //Polymorphism//
+        class Indonesian {
+            constructor(name) {
+                this.name = name
+            }
+            greeting() {
+                return `Halo, nama saya ${this.name}`
+            }
+        }
+        class Javanese extends Indonesian {
+            constructor(name) {
+                super(name)
+            }
+            greeting() {
+                return `Selamat datang ${this.name}`
+            }
+        }
+        const indonesian = new Indonesian('Pahri')
+        const javanese = new Javanese('Kioko')
+        console.log(indonesian.greeting());
+        console.log(javanese.greeting());
+
+        //Abstarction//
+        class France {
+            constructor(name) {
+                this.name = name
+            }
+            greeting() {
+                return `Halo, selamat datang di ${this.name}`
+            }
+        }
+        class German extends France {
+            constructor(name) {
+                super(name)
+            }
+            greeting () {
+                return `Apakah kalian tahu ini di mana? ya! benar ini di ${this.name}`
+            }
+        }
+        const france = new France('Perancis')
+        const german = new German('Jerman')
+        console.log(france.greeting());
+        console.log(german.greeting());
+    </script>
+</body>
+</html>

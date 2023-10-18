@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript</h1>
+    <p>hello</p>
+    <script>
+        //Array Method//
+        //toString()//
+        const fruits = ["Banana", "Orange", "Apple"];
+        console.log(fruits.toString());
+
+        //join()//
+        const fruits2 = ["Banana", "Orange", "Apple"];
+        console.log(fruits2.join(" + "));
+
+        //Pop()menghapus elemen terakhir pada array//
+        const fruits3 = ["Banana", "Orange", "Apple"];
+        console.log(fruits3.pop()); //Akan menampilkan yang di hapus (Apple)//
+        console.log(fruits3); //Akan menampilkan (Banana, Orange)//
+
+        //push()Menambahkan elemen baru ke array(di akhir)+mengembalikan panjang array baru//
+        const fruits4 =['Banana', 'Orange', 'Apple'];
+        console.log(fruits4.push('Lemon'));
+        console.log(fruits4);
+
+        //shift()menghapus elemen array pertama dan menggeser semua elemen lainya ke indeks yang lebih rendah//
+        const fruits5 = ['Banana', 'Orange', 'Apple'];
+        console.log(fruits5.shift());
+        console.log(fruits5);
+
+        //unshift()menambahkan elemen baru ke array(di awal)dan unshift elemen lama//
+        const fruits6 = ['Banana', 'Orange', 'Apple'];
+        console.log(fruits6.unshift("Pear"));
+        console.log(fruits6);
+
+        //change()elemen array di akses menggunakan nomor ideksnya//
+        const fruits7 = ['Banana', 'Orange', 'Apple'];
+        fruits7[0]='Mango';
+        fruits7[fruits7.length]='Grape'; //Untuk menambahkan elemen baru ke akhir array//
+        console.log(fruits7);
+
+        //concat()membuat array baru dengan menggabungkan array yang ada//
+        const girls = ['Monica', 'Nazirah', 'Nazwa'];
+        const boys = ['Arbhy', 'Wahid', 'Hanif'];
+        const myfriend = boys.concat(girls);
+        console.log(myfriend);
+
+        //delete//
+        const fruits8 = ['Banana', 'Orange', 'Apple'];
+        delete fruits8[1];
+        console.log(fruits8);
+
+        //splice()menambahkan item baru ke array//
+        const fruits9 = ['Banana', 'Orange', 'Apple'];
+        fruits9.splice(2, 0, "Lemnon", "Kiwi");
+        console.log(fruits9);
+
+        //slice()mengiris sepotong array menjadi array baru//
+        const fruits10 = ['Banana', 'Orange', 'Apple'];
+        const fruitsliced = fruits10.slice(1, 3);
+        console.log(fruitsliced);
+        //Array Method end//
+    </script>
+</body>
+</html>

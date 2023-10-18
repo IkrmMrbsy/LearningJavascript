@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Java Script</h1>
+    <p>Belajar JS</p>
+    <script>
+        //Switch Statement With Break//
+        let a=2;
+        switch (a){
+            case 3:
+                console.log('Too Small');
+                break;
+                case 4:
+                    console.log('Exactly');
+                    break;
+                    case 5:
+                        console.log('Too Big');
+                        break;
+                        default:
+                            console.log("I dont Know Such Values");
+        }
+         //Switch Statement With Break end//
+
+         //Whitout Break//
+         let b =4;
+         switch (b){
+            case 3:
+                console.log('Too Small');
+                case 4:
+                    console.log('Exactly');
+                    case 5:
+                        console.log('Too Big');
+                        default:
+                            console.log('I dont know such values');
+         }
+        //Whitout Break end//
+
+        //More Complex//
+        switch (new Date().getDay()) {
+            case 0:
+                console.log('minggu');
+                break;
+                case 1:
+                    console.log('senin');
+                    break;
+                    case 2:
+                        console.log('selasa');
+                        break;
+                        case 3:
+                            console.log('rabu');
+                            break;
+                            case 4:
+                                console.log('kamis');
+                                break;
+                                case 5:
+                                    console.log('jumat');
+                                    break;
+                                    case 6:
+                                        console.log('sabtu')
+                                        break;
+                                        default:
+                                            console.log('Tidak ada hari yang cocok');
+        }
+        //More Complex end//
+
+        //Common Code Blocks//
+        let c = 0
+        switch (a){
+            case 0:
+            case 6:
+                console.log('Ini hari libur');
+                break;
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                    console.log('Ini hari kerja');
+                    break;
+                    default:
+                        console.log('Tidak semua dari itu');
+        }
+        //Common Code Blocks end//
+
+        //Strict Comparison//
+        let d = 1;
+        switch (d){
+            case '1':
+                d=1;
+                console.log('Ini String');
+                break;
+                case 1:
+                    d='one';
+                    console.log('ini number');
+                    break;
+                    case 2:
+                        d='two';
+                        console.log('ini number 2');
+                        break;
+                        default:
+                            d='not found';
+                            console.log('tidak ada yang cocok');
+        }
+        //Strict Comparison end//
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript</h1>
+    <p>hello</p>
+    <script>
+        //Callback//
+        //Synchronous Callback//
+       function halo(nama) {
+        alert(`Halo, ${nama}`); //Baris ini hapus jika menggunakan arrow function//
+       }
+
+       function tampilkanPesan(callback) {
+        const nama = prompt('Masukan Nama : ');
+        callback(nama);
+       }
+       tampilkanPesan(halo);
+       //tampilkanPesan(nama => alert(`Halo, ${nama}`)); INI JIKA MENGGUNAKAN ARROW FUNCTION//
+
+       //Asynchronous Callback//
+       function getDataMahasiswa(url, success, error) {
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                success(xhr.response);
+            } else if (xhr.status === 404) {
+                error("Berkas tidak ditemukan");
+            }
+        }
+    }
+    xhr.open('get', url);
+    xhr.send();
+}
+
+console.log('mulai');
+getDataMahasiswa('contohAsynchronous.js', result => {
+    try {
+        const mhs =JSON.parse(result);
+        mhs.forEach(m => console.log("nama mahasiswa" + m.nama));
+    } catch (error) {
+        console.error("Gagal mengurai data JSON: " + error.message);
+    }
+}, errorMessage => {
+    console.error("Gagal mengambil data: " + errorMessage);
+});
+console.log('selesai');
+
+    </script>
+</body>
+</html>

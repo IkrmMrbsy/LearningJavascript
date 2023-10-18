@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hallo ini saya</h1>
+    <p>Ini hasil belajar JS ku</p>
+    <script>
+        //javascript Object//
+        const a= {
+            name :'zaky',
+            age:30,
+            isMarried:true
+        }
+        delete a.isMarried
+        console.log(a)
+        //Javascript Object end//
+
+        //Property Shorthand//
+        function makeUser(nama, umur){
+            return{
+                nama:nama,
+                umur:umur
+            }
+        }
+        let user = makeUser('ikram', 20)
+        console.log(user);
+        //Versi Simpelnya//
+        function makeUser(from, born){
+            return{
+                from,
+                born
+            }
+        }
+        let pengguna = makeUser('london', 1946)
+        console.log(pengguna);
+        //Property Shorthand end//
+
+        //Property Existence//
+         let user2 = {
+            name: 'budi',
+            age: 32,
+            isMarried: false,
+         }
+         for (let key in user2){
+            console.log(user2 [key])
+         }
+        //Property Existence end//
+
+        //Queue Analogy//
+          let fruits = ['Anggur','Nanas','Pir','Stoberi','Apel','Pisang'];
+          console.log(fruits[0]);
+          console.log(fruits[1]);
+          console.log(fruits[2]);
+          console.log(fruits[3]);
+          console.log(fruits[4]);
+          console.log(fruits[5]);
+        //Queue Analogy end//
+
+        //Array Operation//
+          let fruits2 = ['Orange','Banana', 'Grape'];
+          fruits2[1]='Grape';
+          fruits2[2]='Banana';
+          console.log(fruits2);
+        //Pop Untuk menghapus element terakhir//
+          let activities = ['work','eat','sleep','studying'];
+          activities.pop();
+          console.log(activities);
+        //Menghapus kembali elemen terakhir dan simpan ke dalam variable//
+          const removedElement = activities.pop();
+        //Memperoleh elemen yang dihapus//
+          console.log(removedElement);
+          console.log(activities);
+        //Pop end//
+        //Lenght Menemukan panjang elemen//
+        const activities2 = ['eat','sleep','work','studying','game'];
+        console.log(activities2.length);
+        //Array Operation end//
+    </script>
+</body>
+</html>
