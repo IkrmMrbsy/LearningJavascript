@@ -9,12 +9,31 @@
     <h1>Hallo</h1>
     <p>Ini belajar JS saya</p>
     <script>
+        //Operator Perbandingan//
+
+        //== Memeriksa apakah dua nilai sama//
+        //!= Memeriksa apakah dua nilai tidak sama//
+        //> Memeriksa apakah nilai pertama lebih besar dari nilai kedua//
+        //< Memeriksa apakah nilai pertama lebih kecil dari nilai kedua//
+        //>= Memeriksa apakah nilai prtama lebih besar atau sama dengan nilai kedua//
+
+        //Operator Perbandingan//
+
+        //Operator Logika//
+
+        //AND && Mengembalikan true jika kedua operandnya true//
+        //OR || Mengembalikan true jika salah satu operandnya true//
+        //NOT ! Memflip nilai operandnya, !true menjadi false dan sebaliknya//
+        
+        //Operator Logika//
+
+
         //Comparision Operator//
         let a=2
-        console.log(a===2);
-        console.log(a==='2');
-        console.log(0===false);
-        console.log(''===false);
+        console.log(a===2); //Hasil : True//
+        console.log(a==='2'); //Hasil : False//
+        console.log(0===false); //Hasil : False//
+        console.log(''===false); //Hasil : False//
         //Comparision Operator end//
 
         //Logical Operator//
@@ -22,11 +41,26 @@
         //OR ||//
         let b=false
         let c=true
-        console.log(b||c);
+        console.log(b||c); //Hasil : True//
 
         let d=9
         if(d<10||d>20) {
-            console.log(d);
+            console.log(d); //Hasil : 9//
+        }
+
+        //Pernyataan if//
+        let jam = 8;
+
+        if (jam < 9 || jam > 18) {
+            alert('The Office Is Closed'); //Hasil : The Office Is Closed//
+        }
+
+        //Menambahkan Kondisi Pada Pernyataan if//
+        let jam2 = 12;
+        let isWeekend = true;
+
+        if (jam2 < 9 || jam2 > 18 || isWeekend) {
+            alert('The Office Is Closed'); //Hasil : The Office Is Closed//
         }
         //OR || end//
 
@@ -34,21 +68,21 @@
         let hour=12
         let minute=30
         if(hour==12 && minute==30){
-            console.log('The time is 12:30');
+            console.log('The time is 12:30'); //Hasil : The time is 12:30//
         }
         //AND && end//
 
         //NOT !//
         let f=true
-        console.log(!f);
+        console.log(!f); //Hasil : False//
         //NOT ! end//
 
         //Operator Null Checking ??//
         let user;
-        console.log(user ?? 'Anonymous');
+        console.log(user ?? 'Anonymous'); //Hasil : Anonymous//
 
         let user2='Ikram'
-        console.log(user2 ?? 'Anonymous');
+        console.log(user2 ?? 'Anonymous'); //Hasil : Ikram//
         //Operator Null Checking ?? end//
 
         //Logical Operator end//
