@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Perbedaan var, Let dan Const//
+
+        //1.Reassign//
+        var a = 'Hello';
+        var a = 'World';
+        console.log(a); //Hasil : World//
+
+        // let b = 'Hello';
+        // let b = 'World';
+        console.log(b); //Hasil : Error karena ada dua b//
+
+        //2. Hoisting : Memungkinkan variable/fungsi digunakan sebelum deklarasi//
+        x = 'Hello';
+        var x;
+        console.log(x); //Hasil : 10//
+
+        z = 10;
+        let z;
+        console.log(z); //hasil : Error z tidak didefinisikan//
+
+        //3. Scope//
+        var a1 = 0;
+        let b1 = 0;
+        const c1 = 0;
+
+        if (true){
+            var a1 = 1;
+            let b1 = 1;
+            const c1 = 1;
+        }
+        console.log(a1); //Hasil : 1, Tidak menerapkan block scope//
+        console.log(b1);// Hasil : 0, Menerapkan Block scope//
+        console.log(c1);// Hasil : 0, MenerapkanBlock scope//
+
+        //Const//
+        const a2 = 123;
+        a2 = 456; //Error : Harus konstan tidak bisa berubah//
+
+        //Variable const tidak bisa assign ulang tetapi value dan property nya dalam suatu array, object bisa di ubah//
+        const obj = { id: 1, name : 'Ikram'};
+        obj.age = 20;
+        console.log(obj); //Hasil : id : 1, name : ikram, age : 20//
+        obj = {}; //Error
+
+        const arr = [1, 2, 3, 4];
+        arr.push(5);
+        console.log(arr); //Hasil : 1, 2, 3, 4, 5//
+        arr = []; //Error
+    </script>
+</body>
+</html>
