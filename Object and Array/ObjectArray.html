@@ -58,6 +58,15 @@
          for (let key in user2){
             console.log(user2 [key]) //Hasil : budi, 32, false//
          }
+
+         let user3 = {
+          name : 'Budi',
+          age : 34,
+          isMarried: true,
+         }
+         for(let key in user3){
+          console.log(user3[key])
+         }
         //Property Existence end//
 
         //Queue Analogy//
@@ -74,20 +83,24 @@
           let fruits2 = ['Orange','Banana', 'Grape'];
           fruits2[1]='Grape';
           fruits2[2]='Banana';
-          console.log(fruits2);
+          console.log(fruits2); //Hasil : Orange, Grape, Banana//
+
         //Pop Untuk menghapus element terakhir//
           let activities = ['work','eat','sleep','studying'];
           activities.pop();
-          console.log(activities);
+          console.log(activities); //Hasil : work, eat, sleep//
+
         //Menghapus kembali elemen terakhir dan simpan ke dalam variable//
-          const removedElement = activities.pop();
+          const removedElement = activities.pop(); //Hasil : studying//
+
         //Memperoleh elemen yang dihapus//
           console.log(removedElement);
           console.log(activities);
         //Pop end//
+
         //Lenght Menemukan panjang elemen//
         const activities2 = ['eat','sleep','work','studying','game'];
-        console.log(activities2.length);
+        console.log(activities2.length); //Hasil : 5//
         //Array Operation end//
     </script>
 </body>
