@@ -10,33 +10,43 @@
     <p>Ini hasil belajar JS ku</p>
     <script>
         //javascript Object//
-        const a= {
-            name :'zaky',
-            age:30,
-            isMarried:true
+        //Menambahkan//
+        const a1 = {
+          nama : 'Ikram',
+          age : 20
+        };
+        a1.isMarried = false
+        console.log(a1); //Hasil : nama : ikram, age : 20, dan properti isMarried : false, di tambahkan//
+
+        //Menghapus//
+        const a2 = {
+          nama : 'zaky',
+          age : 30,
+          isMarried : true
         }
-        delete a.isMarried
-        console.log(a)
+        delete a2.isMarried
+        console.log(a2); //Hasil : name : zaky, age : 30 dan properti isMarried akan dihapus dari objek a//
         //Javascript Object end//
 
         //Property Shorthand//
         function makeUser(nama, umur){
-            return{
-                nama:nama,
-                umur:umur
-            }
+          return{
+            nama: nama,
+            umur: umur
+          }
         }
-        let user = makeUser('ikram', 20)
-        console.log(user);
+        let user = makeUser('Ikram', 20)
+        console.log(user); //Hasil : nama : ikram , umur : 20//
+
         //Versi Simpelnya//
         function makeUser(from, born){
-            return{
-                from,
-                born
-            }
+          return{
+            from,
+            born
+          }
         }
-        let pengguna = makeUser('london', 1946)
-        console.log(pengguna);
+        let pengguna = makeUser('London', 1946)
+        console.log(pengguna); //Hasil : from : london, born : 1946//
         //Property Shorthand end//
 
         //Property Existence//
@@ -46,18 +56,18 @@
             isMarried: false,
          }
          for (let key in user2){
-            console.log(user2 [key])
+            console.log(user2 [key]) //Hasil : budi, 32, false//
          }
         //Property Existence end//
 
         //Queue Analogy//
           let fruits = ['Anggur','Nanas','Pir','Stoberi','Apel','Pisang'];
-          console.log(fruits[0]);
-          console.log(fruits[1]);
-          console.log(fruits[2]);
-          console.log(fruits[3]);
-          console.log(fruits[4]);
-          console.log(fruits[5]);
+          console.log(fruits[0]); //Hasil : Anggur//
+          console.log(fruits[1]); //Hasil : Nanas//
+          console.log(fruits[2]); //Hasil : Pir//
+          console.log(fruits[3]); //Hasil : Stoberi//
+          console.log(fruits[4]); //Hasil : Apel//
+          console.log(fruits[5]); //Hasil : Pisang//
         //Queue Analogy end//
 
         //Array Operation//
